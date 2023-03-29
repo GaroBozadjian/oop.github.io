@@ -1,0 +1,383 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DS 233 Marketing Analytics</title>
+        <meta name="author" content="Karen Hovhannisyan">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/simple.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai-sublime.css">
+        
+        <style>
+            p{
+                text-align: justify;
+            }
+
+            h2{
+                /* text-align: left; */
+                font-weight: bold;
+            }
+            #left {
+                margin: 10px 0 15px 20px;
+                text-align: center;
+                float: left;
+                z-index:-10;
+                width:48%;
+                font-size: 0.85em;
+                line-height: 1.5; 
+            }
+
+            #right {
+                margin: 10px 0 15px 0;
+                float: right;
+                text-align: center;
+                z-index:-10;
+                width:48%;
+                font-size: 0.85em;
+                line-height: 1.5; 
+            }
+
+            #box-container {
+                display: flex;
+                text-align: center;
+                }
+
+                #box-1 {
+                /* background-color: dodgerblue; */
+                width: 20%;
+                text-align: center;
+                }
+
+                #box-2 {
+                /* background-color: orangered; */
+                width: 38%;
+                text-align: center;
+                }
+
+                #box-3 {
+                /* background-color: green; */
+                width: 38%;
+                text-align: center;
+                }
+
+        </style>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+    <div class="reveal">
+
+      <!-- Any section ment inside of this container is displayed as a slide -->
+     <div class="slides">
+
+
+<!-- Slide 1 -->
+<section>
+<h2>Marketing Analytics</h2>
+<br><br>
+<h4>Garo Bozadjian, AUA</h4>
+
+<h4> Static Vs Abstract methods in Object Oriented Programming ( OOP )</h4>
+</section>
+
+<!-- Slide 2 -->
+<section> 
+    <h2>Objective</h2>
+
+<!-- - Why should you know?
+- Intro to HTML document layout
+- Intro to HTML document components
+- Intro to CSS -->
+<ul>
+    <li>Intro to OOP.</li>
+    <li>What is static and abstract methods.</li>
+    <li>When to use Static and Abstract methods.</li>
+    <li>Examples of Static method.</li>
+    <li>Eamples of Abstract method.</li>
+</ul>
+</section>
+    
+ <!-- Slide  -->
+
+<!-- Slide 3 -->
+<section>
+    <h2> Expected outcome</h2>
+    
+    <p>By the end of the problem solving session, you should be able to:</p>
+
+    <ul>
+        <li>Understand core concepts of OOP and the difference between static and abstract methods.</li>
+        <li>Feel comfortable with implmenting static and abstract methods.</li>
+        <li>Understand the concepts of when to use static and abstract methods.</li>
+    </ul>
+</section>
+
+<!-- what is github-->
+<section>
+    <!-- Slide 5-->
+    <section><h2>OOP</h2> </section>
+    <!-- Slide 6-->
+    <section>
+        <h3>What is OOP?</h3>
+        <p>Object-Oriented Programming (OOP) is a programming paradigm in computer science that relies on the concept of classes and objects. 
+            It is used to structure a software program into simple, reusable pieces of code blueprints (usually called classes), which are used to create individual instances of objects.
+        </p>
+    </section>
+
+    <!-- Slide 7-->
+    <section>
+        <h3>What is a class?</h3>
+        <p>A class is an abstract blueprint that creates more specific, concrete objects. 
+            Classes often represent broad categories, like Car or Dog that share attributes. 
+            These classes define what attributes an instance of this type will have, like color, but not the value of those attributes for a specific object. 
+        </p>
+
+    </section>
+
+    <!-- Slide 8-->
+    <section>
+        <h3>Example of a Class in python</h3>
+        <pre class="python"><code>
+import pandas as pd
+import numpy as mp
+
+class calculator:
+    def __init__(self,x,y) :
+        """
+        [VAR]
+        x: (flot/int) it is flot ot int value
+        y: (flot/int) it is flot ot int value
+        """
+        self.x=x
+        self.y=y
+        </code></pre>
+
+    </section>
+</section>
+
+<!-- Installing Git-->
+<section>
+    <!-- Slide 9-->
+    <section>
+        <h2>Static</h2>
+     </section>
+     <!-- Slide 10-->
+     <section>
+        <h3>What is Static class/method?</h3>
+        <p>Static methods, much like class methods, are methods that are bound to a class rather than its object.
+            They do not require a class instance creation. So, they are not dependent on the state of the object.</p>                
+    </section>
+     <!-- Slide 11-->
+     <section>
+        <h3>When to use static methods?</h3>
+        <ul>
+            <li>Grouping utility function to a class.</li>
+            <li>Having a single implementation.</li>
+        </ul> 
+    </section>
+    <!-- Slide 12-->
+    <section>
+        <h3>Grouping utility function to a class example</h3>
+         <pre class="python"><code>
+class Dates:
+    def __init__(self, date):
+        self.date = date
+        
+    def getDate(self):
+        return self.date
+
+    @staticmethod
+    def toDashDate(date):
+        return date.replace("/", "-")
+
+date = Dates("15-12-2016")
+dateFromDB = "15/12/2016"
+dateWithDash = Dates.toDashDate(dateFromDB)
+
+if(date.getDate() == dateWithDash):
+    print("Equal")
+else:
+    print("Unequal")
+        </code></pre>
+    </section>
+    <section>
+    <h3>Having a single implementation example</h3>
+         <pre class="python"><code>
+class Dates:
+    def __init__(self, date):
+        self.date = date
+        
+    def getDate(self):
+        return self.date
+
+    @staticmethod
+    def toDashDate(date):
+        return date.replace("/", "-")
+
+class DatesWithSlashes(Dates):
+    def getDate(self):
+        return Dates.toDashDate(self.date)
+
+date = Dates("15-12-2016")
+dateFromDB = DatesWithSlashes("15/12/2016")
+
+if(date.getDate() == dateFromDB.getDate()):
+    print("Equal")
+else:
+    print("Unequal")
+        </code></pre>
+    </section>
+</section>
+
+
+<!-- Creating a repository -->
+<section>
+    <!-- Slide 13 -->
+    <section>
+        <h2>Abstract</h2>
+        
+    </section>
+
+     <!-- Slide 14 -->
+    <section>
+        <h3>What is Abstract class/method?</h3>
+        <p>
+            An abstract method is a method that is declared, but contains no implementation. 
+            Abstract classes cannot be instantiated, and require subclasses to provide implementations for the abstract methods.
+        </p>      
+        
+    </section>
+
+    <section>
+        <h3>When to use Abstract methods?</h3>
+        <p>In a nutshell, abstract base classes allow you to implement rules around subclasses. This allows you to define methods that a subclass must have. 
+            Similarly, it allows you to define what parameters a subclass must have.</p>      
+        
+    </section>
+
+    <section>
+        <h3>Example Of Abstract method</h3>
+        <pre class="python"><code>
+from abc import ABC, abstractmethod
+ 
+class Shape(ABC):
+    def __init__(self, shape_name):
+        self.shape_name = shape_name
+    
+    @abstractmethod
+    def draw(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self):
+        super().__init__("circle")
+ 
+    def draw(self):
+        print("Drawing a Circle")
+
+class Triangle(Shape):
+
+    def __init__(self):
+        super().__init__("triangle")
+
+    def draw(self):
+        print("Drawing a Triangle")
+
+#create a circle object
+circle = Circle()
+circle.draw()
+
+#create a triangle object
+triangle = Triangle()
+triangle.draw()
+        </code></pre>
+        
+    </section>
+
+ <!-- Slide 15 -->
+    
+</section>
+
+<!-- Dash layout -->
+
+<section>
+    <h2>Thank you</h2>
+    <p>Please check Coding Samples for the examples and codes.</p>
+</section>
+<!-- END OF THE PRESENTATION -->
+          </div>
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+    <script>
+     // Full list of configuration options available at:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+       slideNumber:true,
+       controls: true,
+       progress: true,
+       history: true,
+       center: true,
+       transitionSpeed:'slow',
+       previewLinks:true,
+       transition: 'convex', // none/fade/slide/convex/concave/zoom
+       // Optional reveal.js plugins
+       dependencies: [
+     { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+       condition: function() { return !document.body.classList; } },
+     { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+       condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+     { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+       condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+     { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+       async: true,
+       condition: function() { return !!document.querySelector( 'pre code' ); },
+       callback: function() { hljs.initHighlightingOnLoad(); } },
+     { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+     { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+       ]
+     });
+    </script>
+
+    div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<h2>Demonstrating the Box Model</h2>
+
+<p>borders; padding; margins; and the actual content.</p>
+
+<div>Some text in Div</div>
+
+</body>
+
+    </body>
+</html>
